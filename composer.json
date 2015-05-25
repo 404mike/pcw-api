@@ -1,0 +1,10 @@
+{
+  "require" : {
+     "guzzlehttp/oauth-subscriber": "0.1.*"
+  },
+  "autoload" : {
+    "psr-4" : {
+      "PCW\\" : "src/PCWOAuth"
+    }
+  }
+}
