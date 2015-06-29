@@ -44,33 +44,33 @@ $pcw->getDiscover()->get();
 Get all items from the items endpoint
 ```php
 // all items
-pcw->getItem()->get();
+$pcw->getItem()->get();
 // pass item id to get items by id
-pcw->getItem( 123 )->get();
+$pcw->getItem( 123 )->get();
 ```
 
 Get all items from the collection endpoint.
 ```php
 // all items
-pcw->getCollection()->get();
+$pcw->getCollection()->get();
 // pass item id to get collection by id
-pcw->getCollection( 123 )->get();
+$pcw->getCollection( 123 )->get();
 ```
 
 Get all items from the trail endpoint
 ```php
 // all items
-pcw->getTrail()->get();
+$pcw->getTrail()->get();
 // pass item id to get trails by id
-pcw->getTrail( 123 )->get();
+$pcw->getTrail( 123 )->get();
 ```
 
 Get all items from the story endpoint
 ```php
 // all items
-pcw->getStory->get();
+$pcw->getStory->get();
 // pass item id to get story by id
-pcw->getStory( 123 )->get();
+$pcw->getStory( 123 )->get();
 ```
 
 #### Chaining methods
@@ -112,7 +112,7 @@ $pcw->getRawQuery( 'item?limit=1&offset=45' );
 Search for items by location
 
 ```
-$pcw->getByLocation( array( 'lat' => '51.504789' , 'lon' => '-3.161316' , 'range' => '20' ) )->get();
+$pcw->getByLocation( array( 'lat' => '51.504789' , 'lon' => '-3.161316' , 'radius' => '20' ) )->get();
 ```
 
 List all items uploaded by a user
