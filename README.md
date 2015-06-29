@@ -96,7 +96,7 @@ $pcw->getItem()->limit(20)->offset(100)->get();
 
 To get a list of which values to pass to the what, when and learn methods
 
-```
+```php
 echo $pcw->listFacet( 'what' )->get();
 echo $pcw->listFacet( 'when' )->get();
 echo $pcw->listFacet( 'learn' )->get();
@@ -104,51 +104,50 @@ echo $pcw->listFacet( 'learn' )->get();
 
 If you're familiar with PCW API then you can query the endpoint with the getRawQuery method
 
-```
+```php
 $pcw->getRawQuery( 'item?limit=1&offset=45' );
 
 ```
 
 Search for items by location
 
-```
+```php
 $pcw->getByLocation( array( 'lat' => '51.504789' , 'lon' => '-3.161316' , 'radius' => '20' ) )->get();
 ```
 
 List all items uploaded by a user
 
-```
+```php
 $pcw->getUserItems(2889)->get();
 ```
 
 Get items by creator
-```
+```php
 $pcw->getItemsByCreator('Ian nolan')->get();
 ```
 
 Get items uploaded after a specific date
-```
+```php
 $pcw->getItemsCreatedAfter('2014-02-02')->get();
-
 ```
 
 Get items uploaded before a specific date
-```
+```php
 $pcw->getItemsCreatedBefore('2014-02-02')->get();
 ```
 
 To filter the items by type, video, audio etc
-```
+```php
 itemType( $type )
 ```
 
 Free text search
-```
+```php
 $pcw->itemQuery('cardiff castle')->limit(3)->offset(5)->get();
 ```
 
 To see what query is sent to the API change the get method to showQuery.
 
-```
+```php
 $pcw->itemQuery('cardiff castle')->limit(3)->offset(5)->showQuery();
 ```
