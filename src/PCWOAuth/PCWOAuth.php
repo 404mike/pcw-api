@@ -164,7 +164,7 @@ class PCWOAuth {
   {
     $this->api_endpoints[] = 'item?lat=' . $location['lat'] .
                              '&lon=' . $location['lon'] .
-                             '&range=' . $location['range'];
+                             '&radius=' . $location['radius'];
     return $this; 
   }
 
